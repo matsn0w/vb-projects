@@ -11,6 +11,7 @@
         End If
 
         Form2.Show()
+        Form2.lblGoalTeam.Text = "Home scored!"
     End Sub
 
     Private Sub NUDScoreGuests_ValueChanged(sender As Object, e As EventArgs) Handles NUDScoreGuests.ValueChanged
@@ -20,6 +21,9 @@
         Else
             lblScoreGuests.Text = NUDScoreGuests.Value
         End If
+
+        Form2.Show()
+        Form2.lblGoalTeam.Text = "Guest scored!"
     End Sub
 
     Private Sub btnClockStart_Click(sender As Object, e As EventArgs) Handles btnClockStart.Click
