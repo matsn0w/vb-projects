@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class formHome
     ' Declare vars
     Dim gender As String
     Dim emotion As String

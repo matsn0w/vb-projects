@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class formHome
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -247,7 +247,7 @@ Partial Class Form1
         Me.WebBrowser1.TabIndex = 8
         Me.WebBrowser1.Visible = False
         '
-        'Form1
+        'formHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -261,7 +261,7 @@ Partial Class Form1
         Me.Controls.Add(Me.gbGender)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "formHome"
         Me.Text = "Wie ben ik?"
         Me.gbGender.ResumeLayout(False)
         Me.gbGender.PerformLayout()
