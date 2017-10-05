@@ -29,16 +29,16 @@ Partial Class Form1
         Me.tbxAH = New System.Windows.Forms.TextBox()
         Me.tbxAVS = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnCalc = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.tbxTP = New System.Windows.Forms.TextBox()
+        Me.tbxK = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.tbxP = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.tbxTLG = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -110,16 +110,26 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Invoer"
         '
+        'btnCalc
+        '
+        Me.btnCalc.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCalc.Location = New System.Drawing.Point(247, 98)
+        Me.btnCalc.Name = "btnCalc"
+        Me.btnCalc.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalc.TabIndex = 4
+        Me.btnCalc.Text = "Bereken"
+        Me.btnCalc.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.tbxTP)
+        Me.GroupBox2.Controls.Add(Me.tbxK)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.tbxP)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.tbxTLG)
         Me.GroupBox2.Location = New System.Drawing.Point(347, 13)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(267, 125)
@@ -127,51 +137,36 @@ Partial Class Form1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Uitvoer"
         '
-        'TextBox1
+        'Label7
         '
-        Me.TextBox1.Location = New System.Drawing.Point(156, 17)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
-        Me.TextBox1.TabStop = False
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 98)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(55, 13)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "Totaalprijs"
         '
-        'Label4
+        'tbxTP
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 20)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(119, 13)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Totale lengte glasvezel:"
+        Me.tbxTP.Location = New System.Drawing.Point(131, 95)
+        Me.tbxTP.Name = "tbxTP"
+        Me.tbxTP.ReadOnly = True
+        Me.tbxTP.Size = New System.Drawing.Size(125, 20)
+        Me.tbxTP.TabIndex = 10
+        Me.tbxTP.TabStop = False
+        Me.tbxTP.Text = "€ 0,00"
+        Me.tbxTP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox2
+        'tbxK
         '
-        Me.TextBox2.Location = New System.Drawing.Point(156, 43)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 7
-        Me.TextBox2.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 46)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(26, 13)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Prijs"
-        '
-        'btnCalc
-        '
-        Me.btnCalc.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCalc.Location = New System.Drawing.Point(247, 96)
-        Me.btnCalc.Name = "btnCalc"
-        Me.btnCalc.Size = New System.Drawing.Size(75, 23)
-        Me.btnCalc.TabIndex = 4
-        Me.btnCalc.Text = "Bereken"
-        Me.btnCalc.UseVisualStyleBackColor = True
+        Me.tbxK.Location = New System.Drawing.Point(131, 69)
+        Me.tbxK.Name = "tbxK"
+        Me.tbxK.ReadOnly = True
+        Me.tbxK.Size = New System.Drawing.Size(125, 20)
+        Me.tbxK.TabIndex = 9
+        Me.tbxK.TabStop = False
+        Me.tbxK.Text = "0%"
+        Me.tbxK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label6
         '
@@ -182,32 +177,45 @@ Partial Class Form1
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Korting"
         '
-        'TextBox3
+        'tbxP
         '
-        Me.TextBox3.Location = New System.Drawing.Point(156, 69)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 9
-        Me.TextBox3.TabStop = False
+        Me.tbxP.Location = New System.Drawing.Point(131, 43)
+        Me.tbxP.Name = "tbxP"
+        Me.tbxP.ReadOnly = True
+        Me.tbxP.Size = New System.Drawing.Size(125, 20)
+        Me.tbxP.TabIndex = 7
+        Me.tbxP.TabStop = False
+        Me.tbxP.Text = "€ 0,00"
+        Me.tbxP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox4
+        'Label5
         '
-        Me.TextBox4.Location = New System.Drawing.Point(156, 95)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 10
-        Me.TextBox4.TabStop = False
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(6, 46)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(26, 13)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Prijs"
         '
-        'Label7
+        'Label4
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 98)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 13)
-        Me.Label7.TabIndex = 11
-        Me.Label7.Text = "Totaalprijs"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 20)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(119, 13)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Totale lengte glasvezel:"
+        '
+        'tbxTLG
+        '
+        Me.tbxTLG.Location = New System.Drawing.Point(131, 17)
+        Me.tbxTLG.Name = "tbxTLG"
+        Me.tbxTLG.ReadOnly = True
+        Me.tbxTLG.Size = New System.Drawing.Size(125, 20)
+        Me.tbxTLG.TabIndex = 0
+        Me.tbxTLG.TabStop = False
+        Me.tbxTLG.Text = "0 m"
+        Me.tbxTLG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Form1
         '
@@ -238,11 +246,11 @@ Partial Class Form1
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnCalc As Button
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents tbxTP As TextBox
+    Friend WithEvents tbxK As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents tbxP As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents tbxTLG As TextBox
 End Class
