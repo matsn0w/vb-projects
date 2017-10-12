@@ -5,6 +5,7 @@ All my VB.NET projects used at my school.
 * Scoreboard
 * Wie ben ik?
 * Glasvezel
+* Filemeldingen
 
 ## Need help?
 Please read the wiki. If that's not answering your question, please contact me at bartscholtus@gmail.com
