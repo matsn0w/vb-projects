@@ -7,6 +7,7 @@ All my VB.NET projects used at my school.
 * Glasvezel
 * Filemeldingen
 * RGB Kleurenmenger
+* Autoverhuur
 
 ## Need help?
 Please read the wiki. If that's not answering your question, please contact me at bartscholtus@gmail.com
