@@ -1,4 +1,7 @@
-﻿Public Class Form1
+﻿' Import currency information
+Imports System.Globalization
+
+Public Class Form1
     ' Declare the vars
     Dim car As Integer
     Dim time As Integer
@@ -41,6 +44,6 @@
         tbxResultTime.Text = time & " dagen"
         tbxResultStart.Text = MonthCalendar1.SelectionStart.ToLongDateString
         tbxResultEnd.Text = MonthCalendar2.SelectionStart.ToLongDateString
-        tbxResultPrice.Text = "€ " & price
+        tbxResultPrice.Text = price.ToString("C2", New CultureInfo("nl-NL")) ' Display the price in euros
     End Sub
 End Class
