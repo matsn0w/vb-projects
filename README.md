@@ -8,6 +8,7 @@ All my VB.NET projects used at my school.
 * Filemeldingen
 * RGB Kleurenmenger
 * Autoverhuur
+* McDonalds
 
 ## Need help?
 Please read the wiki. If that's not answering your question, please contact me at bartscholtus@gmail.com
