@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,39 +20,39 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.gbxBurger = New System.Windows.Forms.GroupBox()
-        Me.cbxBurgersBigTastyBacon = New System.Windows.Forms.CheckBox()
-        Me.cbxBurgersMcChicken = New System.Windows.Forms.CheckBox()
-        Me.cbxBurgersBigMac = New System.Windows.Forms.CheckBox()
+        Me.nudBurgersBigTastyBacon = New System.Windows.Forms.NumericUpDown()
+        Me.nudBurgersMcChicken = New System.Windows.Forms.NumericUpDown()
+        Me.nudBurgersBigMac = New System.Windows.Forms.NumericUpDown()
+        Me.lblBurgersBigTastyBacon = New System.Windows.Forms.Label()
+        Me.lblBurgersMcChicken = New System.Windows.Forms.Label()
+        Me.lblBurgersBigMac = New System.Windows.Forms.Label()
         Me.gbxFriet = New System.Windows.Forms.GroupBox()
         Me.rbtnFritesLarge = New System.Windows.Forms.RadioButton()
         Me.rbtnFritesMedium = New System.Windows.Forms.RadioButton()
         Me.gbxDrinks = New System.Windows.Forms.GroupBox()
+        Me.cbxDrinksSize = New System.Windows.Forms.ComboBox()
         Me.rbtnDrinksSprite = New System.Windows.Forms.RadioButton()
         Me.rbtnDrinksFanta = New System.Windows.Forms.RadioButton()
         Me.rbtnDrinksCoke = New System.Windows.Forms.RadioButton()
-        Me.cbxDrinksLarge = New System.Windows.Forms.CheckBox()
-        Me.cbxDrinksMedium = New System.Windows.Forms.CheckBox()
-        Me.cbxDrinksSmall = New System.Windows.Forms.CheckBox()
         Me.gbxResult = New System.Windows.Forms.GroupBox()
+        Me.tbxTotalPrice = New System.Windows.Forms.TextBox()
+        Me.tbxPriceDrinks = New System.Windows.Forms.TextBox()
+        Me.tbxPriceFrites = New System.Windows.Forms.TextBox()
+        Me.tbxPriceBurgers = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblResultBurgers = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnCalc = New System.Windows.Forms.Button()
+        Me.lblPriceDrinks = New System.Windows.Forms.Label()
+        Me.lblPriceFrites = New System.Windows.Forms.Label()
+        Me.lblPriceBurgers = New System.Windows.Forms.Label()
+        Me.btnCalculate = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.gbxBurger.SuspendLayout()
+        CType(Me.nudBurgersBigTastyBacon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudBurgersMcChicken, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudBurgersBigMac, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxFriet.SuspendLayout()
         Me.gbxDrinks.SuspendLayout()
         Me.gbxResult.SuspendLayout()
@@ -60,53 +60,80 @@ Partial Class Form1
         '
         'gbxBurger
         '
-        Me.gbxBurger.Controls.Add(Me.cbxBurgersBigTastyBacon)
-        Me.gbxBurger.Controls.Add(Me.cbxBurgersMcChicken)
-        Me.gbxBurger.Controls.Add(Me.cbxBurgersBigMac)
+        Me.gbxBurger.Controls.Add(Me.nudBurgersBigTastyBacon)
+        Me.gbxBurger.Controls.Add(Me.nudBurgersMcChicken)
+        Me.gbxBurger.Controls.Add(Me.nudBurgersBigMac)
+        Me.gbxBurger.Controls.Add(Me.lblBurgersBigTastyBacon)
+        Me.gbxBurger.Controls.Add(Me.lblBurgersMcChicken)
+        Me.gbxBurger.Controls.Add(Me.lblBurgersBigMac)
         Me.gbxBurger.Location = New System.Drawing.Point(12, 12)
         Me.gbxBurger.Name = "gbxBurger"
-        Me.gbxBurger.Size = New System.Drawing.Size(225, 91)
+        Me.gbxBurger.Size = New System.Drawing.Size(264, 107)
         Me.gbxBurger.TabIndex = 0
         Me.gbxBurger.TabStop = False
         Me.gbxBurger.Text = "Burger"
         '
-        'cbxBurgersBigTastyBacon
+        'nudBurgersBigTastyBacon
         '
-        Me.cbxBurgersBigTastyBacon.AutoSize = True
-        Me.cbxBurgersBigTastyBacon.Location = New System.Drawing.Point(7, 66)
-        Me.cbxBurgersBigTastyBacon.Name = "cbxBurgersBigTastyBacon"
-        Me.cbxBurgersBigTastyBacon.Size = New System.Drawing.Size(124, 17)
-        Me.cbxBurgersBigTastyBacon.TabIndex = 2
-        Me.cbxBurgersBigTastyBacon.Text = "Big Tasty met Bacon"
-        Me.cbxBurgersBigTastyBacon.UseVisualStyleBackColor = True
+        Me.nudBurgersBigTastyBacon.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.nudBurgersBigTastyBacon.Location = New System.Drawing.Point(137, 70)
+        Me.nudBurgersBigTastyBacon.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.nudBurgersBigTastyBacon.Name = "nudBurgersBigTastyBacon"
+        Me.nudBurgersBigTastyBacon.Size = New System.Drawing.Size(120, 20)
+        Me.nudBurgersBigTastyBacon.TabIndex = 5
         '
-        'cbxBurgersMcChicken
+        'nudBurgersMcChicken
         '
-        Me.cbxBurgersMcChicken.AutoSize = True
-        Me.cbxBurgersMcChicken.Location = New System.Drawing.Point(6, 43)
-        Me.cbxBurgersMcChicken.Name = "cbxBurgersMcChicken"
-        Me.cbxBurgersMcChicken.Size = New System.Drawing.Size(80, 17)
-        Me.cbxBurgersMcChicken.TabIndex = 1
-        Me.cbxBurgersMcChicken.Text = "McChicken"
-        Me.cbxBurgersMcChicken.UseVisualStyleBackColor = True
+        Me.nudBurgersMcChicken.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.nudBurgersMcChicken.Location = New System.Drawing.Point(137, 44)
+        Me.nudBurgersMcChicken.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.nudBurgersMcChicken.Name = "nudBurgersMcChicken"
+        Me.nudBurgersMcChicken.Size = New System.Drawing.Size(120, 20)
+        Me.nudBurgersMcChicken.TabIndex = 4
         '
-        'cbxBurgersBigMac
+        'nudBurgersBigMac
         '
-        Me.cbxBurgersBigMac.AutoSize = True
-        Me.cbxBurgersBigMac.Location = New System.Drawing.Point(7, 20)
-        Me.cbxBurgersBigMac.Name = "cbxBurgersBigMac"
-        Me.cbxBurgersBigMac.Size = New System.Drawing.Size(65, 17)
-        Me.cbxBurgersBigMac.TabIndex = 0
-        Me.cbxBurgersBigMac.Text = "Big Mac"
-        Me.cbxBurgersBigMac.UseVisualStyleBackColor = True
+        Me.nudBurgersBigMac.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.nudBurgersBigMac.Location = New System.Drawing.Point(137, 18)
+        Me.nudBurgersBigMac.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.nudBurgersBigMac.Name = "nudBurgersBigMac"
+        Me.nudBurgersBigMac.Size = New System.Drawing.Size(120, 20)
+        Me.nudBurgersBigMac.TabIndex = 3
+        '
+        'lblBurgersBigTastyBacon
+        '
+        Me.lblBurgersBigTastyBacon.AutoSize = True
+        Me.lblBurgersBigTastyBacon.Location = New System.Drawing.Point(6, 72)
+        Me.lblBurgersBigTastyBacon.Name = "lblBurgersBigTastyBacon"
+        Me.lblBurgersBigTastyBacon.Size = New System.Drawing.Size(108, 13)
+        Me.lblBurgersBigTastyBacon.TabIndex = 2
+        Me.lblBurgersBigTastyBacon.Text = "Big Tasty met Bacon:"
+        '
+        'lblBurgersMcChicken
+        '
+        Me.lblBurgersMcChicken.AutoSize = True
+        Me.lblBurgersMcChicken.Location = New System.Drawing.Point(6, 46)
+        Me.lblBurgersMcChicken.Name = "lblBurgersMcChicken"
+        Me.lblBurgersMcChicken.Size = New System.Drawing.Size(64, 13)
+        Me.lblBurgersMcChicken.TabIndex = 1
+        Me.lblBurgersMcChicken.Text = "McChicken:"
+        '
+        'lblBurgersBigMac
+        '
+        Me.lblBurgersBigMac.AutoSize = True
+        Me.lblBurgersBigMac.Location = New System.Drawing.Point(6, 20)
+        Me.lblBurgersBigMac.Name = "lblBurgersBigMac"
+        Me.lblBurgersBigMac.Size = New System.Drawing.Size(49, 13)
+        Me.lblBurgersBigMac.TabIndex = 0
+        Me.lblBurgersBigMac.Text = "Big Mac:"
         '
         'gbxFriet
         '
         Me.gbxFriet.Controls.Add(Me.rbtnFritesLarge)
         Me.gbxFriet.Controls.Add(Me.rbtnFritesMedium)
-        Me.gbxFriet.Location = New System.Drawing.Point(13, 109)
+        Me.gbxFriet.Location = New System.Drawing.Point(12, 125)
         Me.gbxFriet.Name = "gbxFriet"
-        Me.gbxFriet.Size = New System.Drawing.Size(226, 71)
+        Me.gbxFriet.Size = New System.Drawing.Size(264, 71)
         Me.gbxFriet.TabIndex = 3
         Me.gbxFriet.TabStop = False
         Me.gbxFriet.Text = "Friet"
@@ -118,13 +145,13 @@ Partial Class Form1
         Me.rbtnFritesLarge.Name = "rbtnFritesLarge"
         Me.rbtnFritesLarge.Size = New System.Drawing.Size(52, 17)
         Me.rbtnFritesLarge.TabIndex = 1
-        Me.rbtnFritesLarge.TabStop = True
         Me.rbtnFritesLarge.Text = "Large"
         Me.rbtnFritesLarge.UseVisualStyleBackColor = True
         '
         'rbtnFritesMedium
         '
         Me.rbtnFritesMedium.AutoSize = True
+        Me.rbtnFritesMedium.Checked = True
         Me.rbtnFritesMedium.Location = New System.Drawing.Point(6, 19)
         Me.rbtnFritesMedium.Name = "rbtnFritesMedium"
         Me.rbtnFritesMedium.Size = New System.Drawing.Size(62, 17)
@@ -135,18 +162,26 @@ Partial Class Form1
         '
         'gbxDrinks
         '
+        Me.gbxDrinks.Controls.Add(Me.cbxDrinksSize)
         Me.gbxDrinks.Controls.Add(Me.rbtnDrinksSprite)
         Me.gbxDrinks.Controls.Add(Me.rbtnDrinksFanta)
         Me.gbxDrinks.Controls.Add(Me.rbtnDrinksCoke)
-        Me.gbxDrinks.Controls.Add(Me.cbxDrinksLarge)
-        Me.gbxDrinks.Controls.Add(Me.cbxDrinksMedium)
-        Me.gbxDrinks.Controls.Add(Me.cbxDrinksSmall)
-        Me.gbxDrinks.Location = New System.Drawing.Point(12, 186)
+        Me.gbxDrinks.Location = New System.Drawing.Point(12, 202)
         Me.gbxDrinks.Name = "gbxDrinks"
-        Me.gbxDrinks.Size = New System.Drawing.Size(226, 90)
+        Me.gbxDrinks.Size = New System.Drawing.Size(264, 90)
         Me.gbxDrinks.TabIndex = 3
         Me.gbxDrinks.TabStop = False
         Me.gbxDrinks.Text = "Drinken"
+        '
+        'cbxDrinksSize
+        '
+        Me.cbxDrinksSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxDrinksSize.FormattingEnabled = True
+        Me.cbxDrinksSize.Items.AddRange(New Object() {"Small", "Medium", "Large"})
+        Me.cbxDrinksSize.Location = New System.Drawing.Point(136, 19)
+        Me.cbxDrinksSize.Name = "cbxDrinksSize"
+        Me.cbxDrinksSize.Size = New System.Drawing.Size(121, 21)
+        Me.cbxDrinksSize.TabIndex = 7
         '
         'rbtnDrinksSprite
         '
@@ -155,7 +190,6 @@ Partial Class Form1
         Me.rbtnDrinksSprite.Name = "rbtnDrinksSprite"
         Me.rbtnDrinksSprite.Size = New System.Drawing.Size(52, 17)
         Me.rbtnDrinksSprite.TabIndex = 5
-        Me.rbtnDrinksSprite.TabStop = True
         Me.rbtnDrinksSprite.Text = "Sprite"
         Me.rbtnDrinksSprite.UseVisualStyleBackColor = True
         '
@@ -166,13 +200,13 @@ Partial Class Form1
         Me.rbtnDrinksFanta.Name = "rbtnDrinksFanta"
         Me.rbtnDrinksFanta.Size = New System.Drawing.Size(52, 17)
         Me.rbtnDrinksFanta.TabIndex = 4
-        Me.rbtnDrinksFanta.TabStop = True
         Me.rbtnDrinksFanta.Text = "Fanta"
         Me.rbtnDrinksFanta.UseVisualStyleBackColor = True
         '
         'rbtnDrinksCoke
         '
         Me.rbtnDrinksCoke.AutoSize = True
+        Me.rbtnDrinksCoke.Checked = True
         Me.rbtnDrinksCoke.Location = New System.Drawing.Point(7, 19)
         Me.rbtnDrinksCoke.Name = "rbtnDrinksCoke"
         Me.rbtnDrinksCoke.Size = New System.Drawing.Size(46, 17)
@@ -181,189 +215,117 @@ Partial Class Form1
         Me.rbtnDrinksCoke.Text = "Cola"
         Me.rbtnDrinksCoke.UseVisualStyleBackColor = True
         '
-        'cbxDrinksLarge
-        '
-        Me.cbxDrinksLarge.AutoSize = True
-        Me.cbxDrinksLarge.Location = New System.Drawing.Point(144, 65)
-        Me.cbxDrinksLarge.Name = "cbxDrinksLarge"
-        Me.cbxDrinksLarge.Size = New System.Drawing.Size(53, 17)
-        Me.cbxDrinksLarge.TabIndex = 2
-        Me.cbxDrinksLarge.Text = "Large"
-        Me.cbxDrinksLarge.UseVisualStyleBackColor = True
-        '
-        'cbxDrinksMedium
-        '
-        Me.cbxDrinksMedium.AutoSize = True
-        Me.cbxDrinksMedium.Location = New System.Drawing.Point(144, 42)
-        Me.cbxDrinksMedium.Name = "cbxDrinksMedium"
-        Me.cbxDrinksMedium.Size = New System.Drawing.Size(63, 17)
-        Me.cbxDrinksMedium.TabIndex = 1
-        Me.cbxDrinksMedium.Text = "Medium"
-        Me.cbxDrinksMedium.UseVisualStyleBackColor = True
-        '
-        'cbxDrinksSmall
-        '
-        Me.cbxDrinksSmall.AutoSize = True
-        Me.cbxDrinksSmall.Location = New System.Drawing.Point(144, 19)
-        Me.cbxDrinksSmall.Name = "cbxDrinksSmall"
-        Me.cbxDrinksSmall.Size = New System.Drawing.Size(51, 17)
-        Me.cbxDrinksSmall.TabIndex = 0
-        Me.cbxDrinksSmall.Text = "Small"
-        Me.cbxDrinksSmall.UseVisualStyleBackColor = True
-        '
         'gbxResult
         '
-        Me.gbxResult.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbxResult.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbxResult.Controls.Add(Me.tbxTotalPrice)
+        Me.gbxResult.Controls.Add(Me.tbxPriceDrinks)
+        Me.gbxResult.Controls.Add(Me.tbxPriceFrites)
+        Me.gbxResult.Controls.Add(Me.tbxPriceBurgers)
         Me.gbxResult.Controls.Add(Me.Label14)
-        Me.gbxResult.Controls.Add(Me.Label13)
-        Me.gbxResult.Controls.Add(Me.Label12)
-        Me.gbxResult.Controls.Add(Me.Label11)
-        Me.gbxResult.Controls.Add(Me.Label10)
-        Me.gbxResult.Controls.Add(Me.Label7)
-        Me.gbxResult.Controls.Add(Me.Label6)
-        Me.gbxResult.Controls.Add(Me.Label5)
-        Me.gbxResult.Controls.Add(Me.lblResultBurgers)
-        Me.gbxResult.Controls.Add(Me.Label3)
-        Me.gbxResult.Controls.Add(Me.Label2)
-        Me.gbxResult.Controls.Add(Me.Label1)
-        Me.gbxResult.Location = New System.Drawing.Point(245, 13)
+        Me.gbxResult.Controls.Add(Me.lblPriceDrinks)
+        Me.gbxResult.Controls.Add(Me.lblPriceFrites)
+        Me.gbxResult.Controls.Add(Me.lblPriceBurgers)
+        Me.gbxResult.Location = New System.Drawing.Point(282, 12)
         Me.gbxResult.Name = "gbxResult"
-        Me.gbxResult.Size = New System.Drawing.Size(437, 132)
+        Me.gbxResult.Size = New System.Drawing.Size(248, 133)
         Me.gbxResult.TabIndex = 4
         Me.gbxResult.TabStop = False
         Me.gbxResult.Text = "Prijs"
         '
+        'tbxTotalPrice
+        '
+        Me.tbxTotalPrice.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbxTotalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbxTotalPrice.Location = New System.Drawing.Point(133, 107)
+        Me.tbxTotalPrice.Name = "tbxTotalPrice"
+        Me.tbxTotalPrice.ReadOnly = True
+        Me.tbxTotalPrice.Size = New System.Drawing.Size(109, 20)
+        Me.tbxTotalPrice.TabIndex = 17
+        Me.tbxTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'tbxPriceDrinks
+        '
+        Me.tbxPriceDrinks.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbxPriceDrinks.Location = New System.Drawing.Point(133, 63)
+        Me.tbxPriceDrinks.Name = "tbxPriceDrinks"
+        Me.tbxPriceDrinks.ReadOnly = True
+        Me.tbxPriceDrinks.Size = New System.Drawing.Size(109, 20)
+        Me.tbxPriceDrinks.TabIndex = 16
+        Me.tbxPriceDrinks.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'tbxPriceFrites
+        '
+        Me.tbxPriceFrites.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbxPriceFrites.Location = New System.Drawing.Point(133, 40)
+        Me.tbxPriceFrites.Name = "tbxPriceFrites"
+        Me.tbxPriceFrites.ReadOnly = True
+        Me.tbxPriceFrites.Size = New System.Drawing.Size(109, 20)
+        Me.tbxPriceFrites.TabIndex = 15
+        Me.tbxPriceFrites.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'tbxPriceBurgers
+        '
+        Me.tbxPriceBurgers.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbxPriceBurgers.Location = New System.Drawing.Point(133, 17)
+        Me.tbxPriceBurgers.Name = "tbxPriceBurgers"
+        Me.tbxPriceBurgers.ReadOnly = True
+        Me.tbxPriceBurgers.Size = New System.Drawing.Size(109, 20)
+        Me.tbxPriceBurgers.TabIndex = 14
+        Me.tbxPriceBurgers.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'Label14
         '
+        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(6, 96)
+        Me.Label14.Location = New System.Drawing.Point(6, 110)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(70, 13)
         Me.Label14.TabIndex = 13
         Me.Label14.Text = "Totaalprijs:"
         '
-        'Label13
+        'lblPriceDrinks
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(320, 96)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(53, 13)
-        Me.Label13.TabIndex = 12
-        Me.Label13.Text = "DUMMY"
-        Me.Label13.Visible = False
+        Me.lblPriceDrinks.AutoSize = True
+        Me.lblPriceDrinks.Location = New System.Drawing.Point(6, 66)
+        Me.lblPriceDrinks.Name = "lblPriceDrinks"
+        Me.lblPriceDrinks.Size = New System.Drawing.Size(47, 13)
+        Me.lblPriceDrinks.TabIndex = 2
+        Me.lblPriceDrinks.Text = "Drinken:"
         '
-        'Label12
+        'lblPriceFrites
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(320, 66)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(48, 13)
-        Me.Label12.TabIndex = 11
-        Me.Label12.Text = "DUMMY"
-        Me.Label12.Visible = False
+        Me.lblPriceFrites.AutoSize = True
+        Me.lblPriceFrites.Location = New System.Drawing.Point(6, 43)
+        Me.lblPriceFrites.Name = "lblPriceFrites"
+        Me.lblPriceFrites.Size = New System.Drawing.Size(30, 13)
+        Me.lblPriceFrites.TabIndex = 1
+        Me.lblPriceFrites.Text = "Friet:"
         '
-        'Label11
+        'lblPriceBurgers
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(320, 43)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(48, 13)
-        Me.Label11.TabIndex = 10
-        Me.Label11.Text = "DUMMY"
-        Me.Label11.Visible = False
+        Me.lblPriceBurgers.AutoSize = True
+        Me.lblPriceBurgers.Location = New System.Drawing.Point(6, 20)
+        Me.lblPriceBurgers.Name = "lblPriceBurgers"
+        Me.lblPriceBurgers.Size = New System.Drawing.Size(52, 13)
+        Me.lblPriceBurgers.TabIndex = 0
+        Me.lblPriceBurgers.Text = "Burger(s):"
         '
-        'Label10
+        'btnCalculate
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(320, 20)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(48, 13)
-        Me.Label10.TabIndex = 9
-        Me.Label10.Text = "DUMMY"
-        Me.Label10.Visible = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(171, 66)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(48, 13)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "DUMMY"
-        Me.Label7.Visible = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(117, 66)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 13)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "DUMMY"
-        Me.Label6.Visible = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(117, 43)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(48, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "DUMMY"
-        Me.Label5.Visible = False
-        '
-        'lblResultBurgers
-        '
-        Me.lblResultBurgers.AutoSize = True
-        Me.lblResultBurgers.Location = New System.Drawing.Point(117, 20)
-        Me.lblResultBurgers.Name = "lblResultBurgers"
-        Me.lblResultBurgers.Size = New System.Drawing.Size(48, 13)
-        Me.lblResultBurgers.TabIndex = 3
-        Me.lblResultBurgers.Text = "DUMMY"
-        Me.lblResultBurgers.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 66)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(47, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Drinken:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 43)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Friet:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Burger(s):"
-        '
-        'btnCalc
-        '
-        Me.btnCalc.Location = New System.Drawing.Point(607, 249)
-        Me.btnCalc.Name = "btnCalc"
-        Me.btnCalc.Size = New System.Drawing.Size(75, 23)
-        Me.btnCalc.TabIndex = 5
-        Me.btnCalc.Text = "Reken af"
-        Me.btnCalc.UseVisualStyleBackColor = True
+        Me.btnCalculate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCalculate.Location = New System.Drawing.Point(455, 151)
+        Me.btnCalculate.Name = "btnCalculate"
+        Me.btnCalculate.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalculate.TabIndex = 5
+        Me.btnCalculate.Text = "Reken af"
+        Me.btnCalculate.UseVisualStyleBackColor = True
         '
         'btnReset
         '
-        Me.btnReset.Location = New System.Drawing.Point(526, 249)
+        Me.btnReset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnReset.Location = New System.Drawing.Point(374, 151)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(75, 23)
         Me.btnReset.TabIndex = 6
@@ -374,19 +336,23 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(694, 284)
+        Me.ClientSize = New System.Drawing.Size(542, 304)
         Me.Controls.Add(Me.btnReset)
-        Me.Controls.Add(Me.btnCalc)
+        Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.gbxResult)
         Me.Controls.Add(Me.gbxDrinks)
         Me.Controls.Add(Me.gbxFriet)
         Me.Controls.Add(Me.gbxBurger)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "McDonalds"
+        Me.Text = "McDonald's"
         Me.gbxBurger.ResumeLayout(False)
         Me.gbxBurger.PerformLayout()
+        CType(Me.nudBurgersBigTastyBacon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudBurgersMcChicken, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudBurgersBigMac, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbxFriet.ResumeLayout(False)
         Me.gbxFriet.PerformLayout()
         Me.gbxDrinks.ResumeLayout(False)
@@ -398,32 +364,29 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents gbxBurger As GroupBox
-    Friend WithEvents cbxBurgersBigTastyBacon As CheckBox
-    Friend WithEvents cbxBurgersMcChicken As CheckBox
-    Friend WithEvents cbxBurgersBigMac As CheckBox
     Friend WithEvents gbxFriet As GroupBox
     Friend WithEvents gbxDrinks As GroupBox
-    Friend WithEvents cbxDrinksLarge As CheckBox
-    Friend WithEvents cbxDrinksMedium As CheckBox
-    Friend WithEvents cbxDrinksSmall As CheckBox
     Friend WithEvents rbtnDrinksSprite As RadioButton
     Friend WithEvents rbtnDrinksFanta As RadioButton
     Friend WithEvents rbtnDrinksCoke As RadioButton
     Friend WithEvents rbtnFritesLarge As RadioButton
     Friend WithEvents rbtnFritesMedium As RadioButton
     Friend WithEvents gbxResult As GroupBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents lblResultBurgers As Label
+    Friend WithEvents lblPriceDrinks As Label
+    Friend WithEvents lblPriceFrites As Label
+    Friend WithEvents lblPriceBurgers As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents btnCalc As Button
+    Friend WithEvents btnCalculate As Button
     Friend WithEvents btnReset As Button
+    Friend WithEvents tbxTotalPrice As TextBox
+    Friend WithEvents tbxPriceDrinks As TextBox
+    Friend WithEvents tbxPriceFrites As TextBox
+    Friend WithEvents tbxPriceBurgers As TextBox
+    Friend WithEvents cbxDrinksSize As ComboBox
+    Friend WithEvents nudBurgersBigTastyBacon As NumericUpDown
+    Friend WithEvents nudBurgersMcChicken As NumericUpDown
+    Friend WithEvents nudBurgersBigMac As NumericUpDown
+    Friend WithEvents lblBurgersBigTastyBacon As Label
+    Friend WithEvents lblBurgersMcChicken As Label
+    Friend WithEvents lblBurgersBigMac As Label
 End Class
