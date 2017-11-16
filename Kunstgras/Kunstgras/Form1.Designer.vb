@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.gbxInput = New System.Windows.Forms.GroupBox()
@@ -33,17 +33,19 @@ Partial Class Form1
         Me.lblInputWidth = New System.Windows.Forms.Label()
         Me.lblInputLength = New System.Windows.Forms.Label()
         Me.gbxOutput = New System.Windows.Forms.GroupBox()
+        Me.lblOutputTotalPrice = New System.Windows.Forms.Label()
+        Me.tbxOutputTotalPrice = New System.Windows.Forms.TextBox()
+        Me.lblOutputDiscount = New System.Windows.Forms.Label()
+        Me.tbxOutputDiscount = New System.Windows.Forms.TextBox()
+        Me.tbxOutputPrice = New System.Windows.Forms.TextBox()
+        Me.lblPrice = New System.Windows.Forms.Label()
+        Me.tbxOutputColor = New System.Windows.Forms.TextBox()
         Me.lblOutputColor = New System.Windows.Forms.Label()
         Me.lblOutputSquareMeters = New System.Windows.Forms.Label()
         Me.tbxOutputSurface = New System.Windows.Forms.TextBox()
         Me.lblOutputSurface = New System.Windows.Forms.Label()
-        Me.tbxOutputColor = New System.Windows.Forms.TextBox()
-        Me.lblPrice = New System.Windows.Forms.Label()
-        Me.tbxOutputPrice = New System.Windows.Forms.TextBox()
-        Me.tbxOutputDiscount = New System.Windows.Forms.TextBox()
-        Me.lblOutputDiscount = New System.Windows.Forms.Label()
-        Me.tbxOutputTotalPrice = New System.Windows.Forms.TextBox()
-        Me.lblOutputTotalPrice = New System.Windows.Forms.Label()
+        Me.btnCalculate = New System.Windows.Forms.Button()
+        Me.lblOutputDiscountPercentage = New System.Windows.Forms.Label()
         Me.gbxInput.SuspendLayout()
         Me.gbxOutput.SuspendLayout()
         Me.SuspendLayout()
@@ -62,13 +64,14 @@ Partial Class Form1
         Me.gbxInput.Controls.Add(Me.lblInputLength)
         Me.gbxInput.Location = New System.Drawing.Point(13, 13)
         Me.gbxInput.Name = "gbxInput"
-        Me.gbxInput.Size = New System.Drawing.Size(259, 104)
+        Me.gbxInput.Size = New System.Drawing.Size(282, 104)
         Me.gbxInput.TabIndex = 0
         Me.gbxInput.TabStop = False
         Me.gbxInput.Text = "Invoer"
         '
         'cbxInputColor
         '
+        Me.cbxInputColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbxInputColor.FormattingEnabled = True
         Me.cbxInputColor.Items.AddRange(New Object() {"Groen", "Paars"})
         Me.cbxInputColor.Location = New System.Drawing.Point(93, 72)
@@ -137,8 +140,9 @@ Partial Class Form1
         '
         'gbxOutput
         '
-        Me.gbxOutput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.gbxOutput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbxOutput.Controls.Add(Me.lblOutputDiscountPercentage)
         Me.gbxOutput.Controls.Add(Me.lblOutputTotalPrice)
         Me.gbxOutput.Controls.Add(Me.tbxOutputTotalPrice)
         Me.gbxOutput.Controls.Add(Me.lblOutputDiscount)
@@ -150,12 +154,73 @@ Partial Class Form1
         Me.gbxOutput.Controls.Add(Me.lblOutputSquareMeters)
         Me.gbxOutput.Controls.Add(Me.tbxOutputSurface)
         Me.gbxOutput.Controls.Add(Me.lblOutputSurface)
-        Me.gbxOutput.Location = New System.Drawing.Point(13, 123)
+        Me.gbxOutput.Location = New System.Drawing.Point(13, 152)
         Me.gbxOutput.Name = "gbxOutput"
-        Me.gbxOutput.Size = New System.Drawing.Size(259, 170)
+        Me.gbxOutput.Size = New System.Drawing.Size(282, 164)
         Me.gbxOutput.TabIndex = 1
         Me.gbxOutput.TabStop = False
         Me.gbxOutput.Text = "Resultaat"
+        '
+        'lblOutputTotalPrice
+        '
+        Me.lblOutputTotalPrice.AutoSize = True
+        Me.lblOutputTotalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOutputTotalPrice.Location = New System.Drawing.Point(6, 141)
+        Me.lblOutputTotalPrice.Name = "lblOutputTotalPrice"
+        Me.lblOutputTotalPrice.Size = New System.Drawing.Size(70, 13)
+        Me.lblOutputTotalPrice.TabIndex = 16
+        Me.lblOutputTotalPrice.Text = "Totaalprijs:"
+        '
+        'tbxOutputTotalPrice
+        '
+        Me.tbxOutputTotalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbxOutputTotalPrice.Location = New System.Drawing.Point(93, 138)
+        Me.tbxOutputTotalPrice.Name = "tbxOutputTotalPrice"
+        Me.tbxOutputTotalPrice.ReadOnly = True
+        Me.tbxOutputTotalPrice.Size = New System.Drawing.Size(121, 20)
+        Me.tbxOutputTotalPrice.TabIndex = 15
+        '
+        'lblOutputDiscount
+        '
+        Me.lblOutputDiscount.AutoSize = True
+        Me.lblOutputDiscount.Location = New System.Drawing.Point(6, 100)
+        Me.lblOutputDiscount.Name = "lblOutputDiscount"
+        Me.lblOutputDiscount.Size = New System.Drawing.Size(43, 13)
+        Me.lblOutputDiscount.TabIndex = 14
+        Me.lblOutputDiscount.Text = "Korting:"
+        '
+        'tbxOutputDiscount
+        '
+        Me.tbxOutputDiscount.Location = New System.Drawing.Point(93, 97)
+        Me.tbxOutputDiscount.Name = "tbxOutputDiscount"
+        Me.tbxOutputDiscount.ReadOnly = True
+        Me.tbxOutputDiscount.Size = New System.Drawing.Size(121, 20)
+        Me.tbxOutputDiscount.TabIndex = 13
+        '
+        'tbxOutputPrice
+        '
+        Me.tbxOutputPrice.Location = New System.Drawing.Point(93, 71)
+        Me.tbxOutputPrice.Name = "tbxOutputPrice"
+        Me.tbxOutputPrice.ReadOnly = True
+        Me.tbxOutputPrice.Size = New System.Drawing.Size(121, 20)
+        Me.tbxOutputPrice.TabIndex = 12
+        '
+        'lblPrice
+        '
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Location = New System.Drawing.Point(6, 74)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(29, 13)
+        Me.lblPrice.TabIndex = 11
+        Me.lblPrice.Text = "Prijs:"
+        '
+        'tbxOutputColor
+        '
+        Me.tbxOutputColor.Location = New System.Drawing.Point(93, 45)
+        Me.tbxOutputColor.Name = "tbxOutputColor"
+        Me.tbxOutputColor.ReadOnly = True
+        Me.tbxOutputColor.Size = New System.Drawing.Size(121, 20)
+        Me.tbxOutputColor.TabIndex = 10
         '
         'lblOutputColor
         '
@@ -179,6 +244,7 @@ Partial Class Form1
         '
         Me.tbxOutputSurface.Location = New System.Drawing.Point(93, 19)
         Me.tbxOutputSurface.Name = "tbxOutputSurface"
+        Me.tbxOutputSurface.ReadOnly = True
         Me.tbxOutputSurface.Size = New System.Drawing.Size(121, 20)
         Me.tbxOutputSurface.TabIndex = 8
         '
@@ -191,71 +257,35 @@ Partial Class Form1
         Me.lblOutputSurface.TabIndex = 0
         Me.lblOutputSurface.Text = "Oppervlakte:"
         '
-        'tbxOutputColor
+        'btnCalculate
         '
-        Me.tbxOutputColor.Location = New System.Drawing.Point(93, 45)
-        Me.tbxOutputColor.Name = "tbxOutputColor"
-        Me.tbxOutputColor.Size = New System.Drawing.Size(121, 20)
-        Me.tbxOutputColor.TabIndex = 10
+        Me.btnCalculate.Location = New System.Drawing.Point(220, 123)
+        Me.btnCalculate.Name = "btnCalculate"
+        Me.btnCalculate.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalculate.TabIndex = 2
+        Me.btnCalculate.Text = "&Bereken"
+        Me.btnCalculate.UseVisualStyleBackColor = True
         '
-        'lblPrice
+        'lblOutputDiscountPercentage
         '
-        Me.lblPrice.AutoSize = True
-        Me.lblPrice.Location = New System.Drawing.Point(6, 74)
-        Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(29, 13)
-        Me.lblPrice.TabIndex = 11
-        Me.lblPrice.Text = "Prijs:"
-        '
-        'tbxOutputPrice
-        '
-        Me.tbxOutputPrice.Location = New System.Drawing.Point(93, 71)
-        Me.tbxOutputPrice.Name = "tbxOutputPrice"
-        Me.tbxOutputPrice.Size = New System.Drawing.Size(121, 20)
-        Me.tbxOutputPrice.TabIndex = 12
-        '
-        'tbxOutputDiscount
-        '
-        Me.tbxOutputDiscount.Location = New System.Drawing.Point(93, 97)
-        Me.tbxOutputDiscount.Name = "tbxOutputDiscount"
-        Me.tbxOutputDiscount.Size = New System.Drawing.Size(121, 20)
-        Me.tbxOutputDiscount.TabIndex = 13
-        '
-        'lblOutputDiscount
-        '
-        Me.lblOutputDiscount.AutoSize = True
-        Me.lblOutputDiscount.Location = New System.Drawing.Point(6, 100)
-        Me.lblOutputDiscount.Name = "lblOutputDiscount"
-        Me.lblOutputDiscount.Size = New System.Drawing.Size(43, 13)
-        Me.lblOutputDiscount.TabIndex = 14
-        Me.lblOutputDiscount.Text = "Korting:"
-        '
-        'tbxOutputTotalPrice
-        '
-        Me.tbxOutputTotalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbxOutputTotalPrice.Location = New System.Drawing.Point(93, 144)
-        Me.tbxOutputTotalPrice.Name = "tbxOutputTotalPrice"
-        Me.tbxOutputTotalPrice.Size = New System.Drawing.Size(121, 20)
-        Me.tbxOutputTotalPrice.TabIndex = 15
-        '
-        'lblOutputTotalPrice
-        '
-        Me.lblOutputTotalPrice.AutoSize = True
-        Me.lblOutputTotalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOutputTotalPrice.Location = New System.Drawing.Point(6, 147)
-        Me.lblOutputTotalPrice.Name = "lblOutputTotalPrice"
-        Me.lblOutputTotalPrice.Size = New System.Drawing.Size(70, 13)
-        Me.lblOutputTotalPrice.TabIndex = 16
-        Me.lblOutputTotalPrice.Text = "Totaalprijs:"
+        Me.lblOutputDiscountPercentage.AutoSize = True
+        Me.lblOutputDiscountPercentage.Location = New System.Drawing.Point(220, 100)
+        Me.lblOutputDiscountPercentage.Name = "lblOutputDiscountPercentage"
+        Me.lblOutputDiscountPercentage.Size = New System.Drawing.Size(21, 13)
+        Me.lblOutputDiscountPercentage.TabIndex = 17
+        Me.lblOutputDiscountPercentage.Text = "(%)"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 305)
+        Me.ClientSize = New System.Drawing.Size(307, 328)
+        Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.gbxOutput)
         Me.Controls.Add(Me.gbxInput)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Kunstgras"
         Me.gbxInput.ResumeLayout(False)
@@ -287,4 +317,6 @@ Partial Class Form1
     Friend WithEvents tbxOutputDiscount As TextBox
     Friend WithEvents lblOutputTotalPrice As Label
     Friend WithEvents tbxOutputTotalPrice As TextBox
+    Friend WithEvents btnCalculate As Button
+    Friend WithEvents lblOutputDiscountPercentage As Label
 End Class
