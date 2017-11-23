@@ -22,17 +22,18 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dtpLeavetime = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbxTrain = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbxDestination = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.tbxVia = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.dtpDelay = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label1
@@ -46,7 +47,8 @@ Partial Class Form1
         '
         'dtpLeavetime
         '
-        Me.dtpLeavetime.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpLeavetime.CustomFormat = "HH:mm"
+        Me.dtpLeavetime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpLeavetime.Location = New System.Drawing.Point(132, 12)
         Me.dtpLeavetime.Name = "dtpLeavetime"
         Me.dtpLeavetime.ShowUpDown = True
@@ -63,15 +65,15 @@ Partial Class Form1
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Treinsoort:"
         '
-        'ComboBox1
+        'cbxTrain
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Intercity", "Sprinter", "ICE"})
-        Me.ComboBox1.Location = New System.Drawing.Point(132, 38)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(140, 21)
-        Me.ComboBox1.TabIndex = 4
+        Me.cbxTrain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxTrain.FormattingEnabled = True
+        Me.cbxTrain.Items.AddRange(New Object() {"Intercity", "Sprinter", "ICE"})
+        Me.cbxTrain.Location = New System.Drawing.Point(132, 38)
+        Me.cbxTrain.Name = "cbxTrain"
+        Me.cbxTrain.Size = New System.Drawing.Size(140, 21)
+        Me.cbxTrain.TabIndex = 4
         '
         'Label3
         '
@@ -82,12 +84,12 @@ Partial Class Form1
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Bestemming:"
         '
-        'TextBox1
+        'tbxDestination
         '
-        Me.TextBox1.Location = New System.Drawing.Point(132, 65)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.tbxDestination.Location = New System.Drawing.Point(132, 65)
+        Me.tbxDestination.Name = "tbxDestination"
+        Me.tbxDestination.Size = New System.Drawing.Size(140, 20)
+        Me.tbxDestination.TabIndex = 6
         '
         'Label4
         '
@@ -98,22 +100,12 @@ Partial Class Form1
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Via:"
         '
-        'TextBox2
+        'tbxVia
         '
-        Me.TextBox2.Location = New System.Drawing.Point(132, 91)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox2.TabIndex = 8
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker1.Location = New System.Drawing.Point(132, 117)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.ShowUpDown = True
-        Me.DateTimePicker1.Size = New System.Drawing.Size(140, 20)
-        Me.DateTimePicker1.TabIndex = 9
-        Me.DateTimePicker1.Value = New Date(2017, 11, 23, 12, 0, 0, 0)
+        Me.tbxVia.Location = New System.Drawing.Point(132, 91)
+        Me.tbxVia.Name = "tbxVia"
+        Me.tbxVia.Size = New System.Drawing.Size(140, 20)
+        Me.tbxVia.TabIndex = 8
         '
         'Label5
         '
@@ -124,34 +116,47 @@ Partial Class Form1
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Vertraging:"
         '
-        'Button1
+        'btnSubmit
         '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.btnSubmit.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(197, 145)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "&Verzend"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSubmit.Location = New System.Drawing.Point(197, 145)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnSubmit.TabIndex = 11
+        Me.btnSubmit.Text = "&Verzend"
+        Me.btnSubmit.UseVisualStyleBackColor = True
+        '
+        'dtpDelay
+        '
+        Me.dtpDelay.CustomFormat = "mm"
+        Me.dtpDelay.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpDelay.Location = New System.Drawing.Point(132, 117)
+        Me.dtpDelay.Name = "dtpDelay"
+        Me.dtpDelay.ShowUpDown = True
+        Me.dtpDelay.Size = New System.Drawing.Size(140, 20)
+        Me.dtpDelay.TabIndex = 13
+        Me.dtpDelay.Value = New Date(2017, 11, 23, 12, 0, 0, 0)
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 180)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.dtpDelay)
+        Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.tbxVia)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tbxDestination)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbxTrain)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.dtpLeavetime)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(10, 10)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "NS Informatiebord"
@@ -163,12 +168,12 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents dtpLeavetime As DateTimePicker
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbxTrain As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents tbxDestination As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents tbxVia As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSubmit As Button
+    Friend WithEvents dtpDelay As DateTimePicker
 End Class
