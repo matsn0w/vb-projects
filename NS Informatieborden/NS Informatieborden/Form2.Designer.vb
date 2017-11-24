@@ -174,6 +174,7 @@ Partial Class Form2
         Me.lblDelay.TabIndex = 11
         Me.lblDelay.Text = "+99 minuten"
         Me.lblDelay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblDelay.Visible = False
         '
         'Timer1
         '

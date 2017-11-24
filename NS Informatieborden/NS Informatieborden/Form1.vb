@@ -20,5 +20,11 @@
 
         ' Open form
         Form2.Show()
+
+        Form2.lblLeaveTime.Text = leavetime.ToString("HH:mm")
+        Form2.lblTrain.Text = train
+        Form2.lblDestination.Text = destination
+        Form2.lblVia.Text = "Via " & via
+        Form2.lblDelay.Text = "+" & delay.ToString("mm") & " minuten"
     End Sub
 End Class
